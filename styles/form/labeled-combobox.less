@@ -1,0 +1,24 @@
+.form-labeledCombobox {
+  margin: 0 0 20px;
+  padding: 0;
+  border: none;
+
+  &.is-valid,
+  &.is-required,
+  &.is-error {
+    .form-validation {
+      &:after {
+        right: -25px;
+      }
+    }
+  }
+
+  .rw-combobox.rw-widget {
+    width: 280px;
+    float: none;
+
+    .rw-input {
+      height: 30px;
+    }
+  }
+}

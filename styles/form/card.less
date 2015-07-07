@@ -1,0 +1,92 @@
+&.form--card {
+  margin: 30px 20px;
+
+  .form-fieldset {
+    margin: 10px 0;
+
+    &.form-inputAppend img {
+      float: right;
+      height: 25px;
+      margin-left: -60px;
+      margin-top: 4px;
+      margin-right: 5px;
+    }
+  }
+
+  .form-label {
+    margin: 5px;
+    float: none;
+    display: block;
+    width: auto;
+  }
+
+  .card-container {
+    .u-clearfix;
+
+    .form-fieldset {
+      float: left;
+      margin-right: 30px;
+    }
+  }
+
+  .card-country .rw-dropdownlist.rw-widget {
+    width: 280px;
+
+    .rw-input {
+      height: 30px;
+    }
+  }
+
+  .payment-paypal {
+    position: absolute;
+    right: 50px;
+    top: 150px;
+  }
+
+  .card-date {
+    width: 150px;
+    .form-label {
+
+      width: 100%;
+    }
+
+    .form-validation {
+      width: 100%;
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  .card-monthInput.rw-combobox.rw-widget {
+    width: 40%;
+    margin-right: 2%;
+    float: left;
+  }
+
+  .card-yearInput.rw-combobox.rw-widget {
+    width: 50%;
+  }
+
+  .card-cvv {
+    .form-input {
+      width: 100%;
+    }
+    
+    .form-validation {
+      max-width: 66px;
+    }
+  }
+
+  .card-vatInput {
+    width: 160px;
+  }
+
+  .card-vatLabelSmall {
+    font-size: @fontSize-smaller;
+    text-transform: initial;
+    .font-sansN4;
+    color: @color-grayDark;
+  }
+}

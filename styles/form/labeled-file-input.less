@@ -1,0 +1,31 @@
+.form-labeledFileInput {
+  margin: 0 0 20px;
+  padding: 0;
+  border: none;
+
+  &.is-valid,
+  &.is-required,
+  &.is-error {
+    .form-validation {
+      &:after {
+        top: 5px;
+        right: 120px;
+      }
+    }
+  }
+
+  .labeledFileInput-fileControls {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+    .labeledFileInput-fileName {
+      margin-left: 35px;
+    }
+
+    .labeledFileInput-fileInput {
+      position: absolute;
+      top: -1000px;
+    }
+  }
+}

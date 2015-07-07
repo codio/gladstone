@@ -1,0 +1,79 @@
+.form {
+  .is-valid,
+  .is-required,
+  .is-error {
+    .form-validation {
+      width: 282px; // same as .form-input
+    }
+    .form-validation {
+      position: relative;
+      &:after {
+        font-family: "SSPika";
+        position: absolute;
+        line-height: 19px;
+        vertical-align: bottom;
+        right: 10px;
+        top: 9px;
+        border-radius: 10px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        font-size: 8px;
+        color: @color-white;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+
+    &.form-validation--onLabel {
+      .form-validation {
+        &:after {
+          right: 4px;
+          top: -22px;
+        }
+      }
+    }
+  }
+
+  .is-error {
+    .form-validation {
+      &:after {
+        .ss-pika-mixin;
+        content: 'delete';
+        background: @color-red;
+      }
+    }
+  }
+
+  .is-valid {
+    .form-validation {
+      &:after {
+        .ss-pika-mixin;
+        content: 'check';
+        background: @color-blueLight;
+      }
+    }
+  }
+
+  .is-required {
+    .form-validation {
+      &:after {
+        .ss-pika-mixin;
+        content: 'delete';
+        background: @color-red;
+      }
+    }
+  }
+
+  .is-valid,
+  .is-errror,
+  .is-required {
+    .rw-multiselect,
+    .rw-combobox,
+    .rw-dropdownlist {
+      .rw-input:after {
+        content: '';
+        display: none;
+      }
+    }
+  }
+}

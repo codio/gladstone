@@ -1,0 +1,53 @@
+.rw-dropdownlist.rw-widget,
+.rw-multiselect.rw-widget,
+.rw-combobox.rw-widget {
+  width: 150px;
+  float: right;
+  border-radius: @baseBorderRadius;
+  border: 1px solid @color-grayLight;
+
+  .rw-input {
+    &::placeholder,
+    .rw-placeholder {
+      font-family: @fontFamily-sans;
+      color: @color-gray;
+      .font-sansN3;
+    }
+  }
+
+  &.rw-state-focus,
+  &.rw-state-focus:hover {
+    box-shadow: none;
+  }
+
+  .rw-popup {
+    box-shadow: none;
+    border-radius: @baseBorderRadius;
+    border: 1px solid @color-grayLight;
+    padding: 0;
+
+
+    ul.rw-list {
+      li.rw-list-option.rw-state-selected {
+        background-color: @color-blue;
+        color: @color-white;
+        border: none;
+
+        &:hover {
+          background-color: @color-blue;
+        }
+      }
+
+      li.rw-list-option {
+        border-radius: 0;
+        color: @color-blueGrayDark--text;
+        border: none;
+
+        &:hover {
+          background-color: @color-grayTinyLight;
+          border: none;
+        }
+      }
+    }
+  }
+}

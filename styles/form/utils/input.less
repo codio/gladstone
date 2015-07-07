@@ -1,0 +1,39 @@
+.u-input {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 32px;
+  width: 280px;
+  padding: 6px 10px;
+  line-height: 10px;
+  vertical-align: middle;
+
+  .font-sansN4;
+  font-size: @fontSize-smaller;
+
+  border-radius: @baseBorderRadius;
+  border: 1px solid @color-grayLight;
+
+  color: @color-blueGrayDark--text;
+  background-color: @color-white;
+  transition: border linear .2s, box-shadow linear .2s;
+
+  &::placeholder {
+    font-family: @fontFamily-sans;
+    color: @color-gray;
+    .font-sansN3;
+    line-height: 18px;
+  }
+
+  // Focus state
+  &:focus {
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 2px @color-gray;
+  }
+
+  // Disabled state
+  &.is-disabled {
+    cursor: not-allowed;
+    background-color: @color-grayVeryLight;
+  }
+}

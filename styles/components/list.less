@@ -1,0 +1,55 @@
+@keyframes list-fadeIn {
+  .anim-fadeIn;
+}
+
+.infinite-list {
+  overflow-y: auto !important;
+}
+
+.list {
+  .display(flex);
+  .flex-direction(column);
+  .flex(1);
+  position: relative;
+
+  .tabs {
+    .display(flex);
+    .flex-direction(column);
+    .flex(1);
+
+    .tabs-navigation {
+      position: absolute;
+      top: 0;
+
+      ul.tabs-menu {
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .tab-panel {
+    .display(flex);
+    .flex-direction(column);
+    .flex(1);
+    padding: 0;
+
+    & > div {
+      .display(flex);
+      .flex-direction(row);
+      .flex(1);
+    }
+
+    .infinite-list {
+      padding: 15px 30px;
+      .flex(1);
+    }
+  }
+
+  .blockNotice {
+    animation: list-fadeIn .2s ease-out;
+  }
+
+  .item {
+    animation: list-fadeIn .1s ease-out;
+  }
+}

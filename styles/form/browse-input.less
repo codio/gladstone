@@ -1,0 +1,40 @@
+.form-browseInput {
+  .input {
+    border: 1px solid @color-grayLight;
+    border-radius: @baseBorderRadius;
+    color: @color-blueGrayDark--text;
+    .font-sansN6;
+    font-size: @fontSize-base;
+    .display(flex);
+    .flex-direction(row);
+    padding: 2px;
+    width: 274px;
+
+    .logoImage {
+      .flex(0, 1, 37px);
+    }
+
+    .logoImage .logoEl {
+      width: 25px;
+      height: 25px;
+      line-height: @lineHeight-tight;
+      font-size: @fontSize-small;
+      margin: 0 10px 0 0;
+      top: 0;
+      left: 0;
+    }
+
+    .name {
+      margin-top: 1px;
+      .flex(2);
+      font-size: @fontSize-small;
+      line-height: @lineHeight-tight;
+    }
+
+    .btn--browse {
+      margin-top: 0px;
+      padding: 0 10px;
+      height: 27px;
+    }
+  }
+}

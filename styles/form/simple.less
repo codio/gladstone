@@ -1,0 +1,34 @@
+&.form--simple {
+  .form--simpleBase;
+  margin: 26px;
+  background: @color-white;
+  border-radius: @baseBorderRadius;
+  padding: 30px;
+  border: 1px solid @color-grayTinyLight;
+}
+
+&.form--simpleBase {
+  .display(flex);
+  .flex-direction(column);
+
+  .flex(0, 0, auto);
+  min-width: 340px;
+
+  .form-fieldset {
+    .display(flex);
+    .flex-direction(column);
+    padding-left: 36px;
+
+    &.is-hidden {
+      display: none;
+    }
+
+    .form-label {
+      text-transform: uppercase;
+      .font-sansN5;
+      color: @color-gray;
+      font-size: @fontSize-smaller;
+      margin: 5px;
+    }
+  }
+}

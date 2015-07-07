@@ -1,0 +1,261 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Base styles
+// --------------------------------------------------
+
+// Core
+.btn {
+  display: inline-block;
+  padding: 3px 15px 2px;
+  margin-bottom: 0; // For input.btn
+  font-family: @fontFamily-sans;
+  .font-sansN5;
+  font-size: @fontSize-smallest;
+  line-height: @lineHeight-base;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background: @color-grayVeryLight--btnBackground;
+  border-radius: @baseBorderRadius;
+  color: @color-white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+
+  &:hover {
+    text-decoration: none;
+    background: @color-grayVeryLight--btnBackgroundHighlight;
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .u-tabFocus;
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    background: darken(@color-grayVeryLight--btnBackground, 30%);
+    color: @color-white;
+    outline: 0;
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    background-image: none;
+    opacity: 0.7;
+
+    &:hover {
+      background-color: @color-grayVeryLight--btnBackground;
+    }
+  }
+
+  &.loading {
+    background-image: url(/images/spinner-black.gif);
+    background-repeat: no-repeat;
+    background-position: 18px 7px;
+    padding-left: 40px !important;
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+// Large
+.btn--large {
+  padding: 6px 19px;
+  font-size: @fontSize-base;
+  border-radius: @baseBorderRadius;
+}
+
+.btn--large [class^="icon-"],
+.btn--large [class*=" icon-"] {
+  margin-top: 4px;
+}
+
+// Small
+.btn--small {
+  padding: 2px 10px;
+  font-size: @fontSize-micro;
+  border-radius: 2px;
+}
+
+.btn--small [class^="icon-"],
+.btn--small [class*=" icon-"] {
+  margin-top: 0;
+}
+
+// Block button
+// -------------------------
+
+.btn--block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+}
+
+// Vertically space out multiple block buttons
+.btn--block + .btn--block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn--block {
+    width: 100%;
+  }
+}
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.btn--primary.active,
+.btn--danger.active,
+.btn--success.active,
+.btn--info.active,
+.btn--inverse.active {
+  color: rgba(255, 255, 255, .75);
+}
+
+.btn--danger {
+  background-color: @color-red;
+}
+
+// Set the backgrounds
+// -------------------------
+.btn--primary {
+  color: @color-white;
+  background: @color-blue--btnPrimaryBackground;
+  border: none;
+
+  &:hover {
+    background: darken(@color-blue--btnPrimaryBackground, 3%);
+    color: @color-white;
+  }
+
+  &.disabled,
+  &[disabled] {
+    &:hover {
+      background: @color-blue--btnPrimaryBackground;
+    }
+  }
+
+  &.loading {
+    background-image: url(/images/spinner-lightbg.gif);
+  }
+}
+
+// Danger and error appear as red
+.btn--danger {
+  color: @color-white;
+  background: @color-red--btnDangerBackground;
+  &:hover {
+    background: darken(@color-red--btnDangerBackground, 3%);
+  }
+
+  &.disabled,
+  &[disabled] {
+    &:hover {
+      background: @color-red--btnDangerBackground;
+    }
+  }
+}
+
+// Success appears as green
+.btn--success {
+  color: @color-white;
+  background: @color-green--btnSuccessBackground;
+  &:hover {
+    background: darken(@color-green--btnSuccessBackground, 3%);
+  }
+
+  &.disabled,
+  &[disabled] {
+    &:hover {
+      background: @color-green--btnSuccessBackground;
+    }
+  }
+}
+
+// Info appears as a neutral blue
+.btn--info {
+  color: @color-blueGrayDark--text;
+  background: @color-grayVeryLight--btnInfoBackground;
+  border: 1px solid @color-grayDark;
+  &:hover {
+    background: @color-grayVeryLight--btnInfoBackgroundHighlight;
+    color: darken(@color-blueGrayDark--text, 3%);
+  }
+
+  &.disabled,
+  &[disabled] {
+    &:hover {
+      background: @color-grayVeryLight--btnInfoBackground;
+    }
+  }
+}
+
+// Inverse appears as dark gray
+.btn--inverse {
+  color: @color-white;
+  background: @color-grayDarker--btnInverseBackground;
+  &:hover {
+    background: darken(@color-grayDarker--btnInverseBackground, 3%);
+  }
+
+  &.disabled,
+  &[disabled] {
+    &:hover {
+      background: @color-grayDarker--btnInverseBackground;
+    }
+  }
+}
+
+.btn--icon {
+  color: @color-blueGrayDark--text;
+  background: transparent;
+  font-size: @fontSize-larger;
+  padding: 6px 10px;
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.btn--iconDanger {
+  color: @color-white;
+  background: @color-red--btnDangerBackground;
+  font-size: @fontSize-larger;
+  padding: 6px 10px;
+  &:hover {
+    background: darken(@color-red--btnDangerBackground, 3%);
+  }
+}
+
+.btn--browse {
+  background: @color-gray;
+  text-transform: none;
+  border: none;
+  border-radius: 2px;
+  color: @color-white;
+  .font-sansN4;
+  font-size: @fontSize-smallest;
+  padding: 2px 10px 0px;
+  float: right;
+  transition: all .3s linear;
+
+  &:hover {
+    background: darken(@color-gray, 10%);
+  }
+}

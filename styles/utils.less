@@ -1,0 +1,56 @@
+.u-clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.u-uppercase {
+  text-transform: uppercase;
+}
+
+.u-pullRight {
+  float: right;
+}
+
+.u-centered {
+  text-align: center;
+}
+
+// Webkit-style focus
+.u-tabFocus {
+  // Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.u-fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 0.35s, opacity 0.35s linear;
+
+  &.u-fade--in {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.35s linear;
+  }
+}
+
+.u-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.u-horizontalRule {
+  border: 0;
+  background-color: #ddd;
+  height: 1px;
+  margin: 35px 6px;
+}
+
+.u-inline {
+  display: inline-block;
+}
