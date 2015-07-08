@@ -1,0 +1,110 @@
+// Mixin for default list item
+// like stacks, packs, modules list
+
+.default-list-item {
+  height: 80px;
+  font-size: @fontSize-base;
+  background-color: @color-white;
+  border: 1px solid @color-grayTinyLight;
+  border-radius: @baseBorderRadius;
+  margin-bottom: 20px;
+  transition: border .3s ease-in-out;
+  .display(flex);
+  .flex-direction(row);
+
+  &:hover {
+    border: 1px solid lighten(@color-blueLight, 25%);
+  }
+
+  .private {
+    align-self: flex-end;
+    font-size: @fontSize-large;
+    margin: 0 0 0 -13px;
+    padding-bottom: 9px;
+  }
+
+  .details {
+    .flex(1);
+    margin: 10px 0 10px 20px;
+  }
+
+  .detailsLink {
+    .display(flex);
+    .flex-direction(column);
+    vertical-align: middle;
+    color: @color-blueGrayDark--text;
+    .font-sansN6;
+    font-size: @fontSize-smaller;
+    height: 38px;
+    padding-bottom: 3px;
+    &:hover {
+      text-decoration: none;
+    };
+    cursor: pointer;
+  }
+
+  .itemOwner,
+  .itemOwnerOrg {
+    font-size: @fontSize-small;
+    .font-sansN3;
+    color: @color-gray;
+  }
+
+  .shortDescription {
+    .font-sansI3;
+    font-size: 11px;
+    line-height: @lineHeight-looser;
+  }
+
+  .metadata {
+    .display(flex);
+    .flex-direction(row);
+    align-items: center;
+  }
+
+  .downloads {
+    i.icon {
+      margin-left: 5px;
+    }
+  }
+
+  .action {
+    margin: 0 20px;
+
+    &.is-disabled {
+      opacity: 0.3;
+
+      &:hover {
+        cursor: default;
+        .icon {
+          color: @color-white;
+        }
+      }
+    }
+
+    .icon {
+      font-size: @fontSize-base;
+      border-radius: @baseBorderRadius;
+      padding: 5px 10px 2px;
+      color: @color-white;
+      background: @color-grayLight;
+      line-height: @lineHeight-looser;
+
+      transition: all .5s;
+    }
+
+    &:hover {
+      text-decoration: none;
+
+      .icon {
+        color: @color-black;
+      }
+    }
+
+  }
+}
+
+.default-list-item--with-addons {
+  height: auto;
+  min-height: 80px;
+}
