@@ -1,0 +1,43 @@
+.logoImage {
+  .display(flex);
+  .flex-direction(row);
+  .flex(0, 1, 50px);
+
+  .logoEl {
+    width: 30px;
+    height: 30px;
+    border: 1px solid @color-grayLight;
+    border-radius: 50%;
+    background: #FFF;
+    display: inline-block;
+    font-size: @fontSize-base;
+    text-transform: uppercase;
+    .font-sansN6;
+    text-align: center;
+    line-height: 30px;
+    color: lighten(@color-blue, 20%);
+    overflow: hidden;
+    margin: 0;
+  }
+}
+
+.logoImage--large {
+  .flex(0, 0, 110px);
+  margin-top: 40px;
+  position: relative;
+
+  .logoEl {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin-left: 0;
+    font-size: 36px;
+  }
+
+  .icon {
+    font-size: @fontSize-jumbo;
+    position: absolute;
+    top: 80px;
+    left: 60px;
+  }
+}
